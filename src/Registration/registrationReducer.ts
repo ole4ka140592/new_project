@@ -2,14 +2,14 @@ import {Dispatch} from "redux";
 import {registrationAPI} from "./registrationAPI";
 
 const initialState = {
-    isLoggedIn: false
+    isRegistrationIn: false
 }
 type InitialStateType = typeof initialState
 
-export const registrationReducer = (state: InitialStateType = initialState, action: LoginActionsType): InitialStateType => {
+export const registrationReducer = (state: InitialStateType = initialState, action: RegistrationActionsType): InitialStateType => {
     switch (action.type) {
-        case 'login/SET-IS-LOGGED-IN':
-            return {...state, isLoggedIn: action.value}
+        case 'registration/SET-IS-REGISTRATION-IN':
+            return {...state, isRegistrationIn: action.value}
         default:
             return state
     }
@@ -17,19 +17,19 @@ export const registrationReducer = (state: InitialStateType = initialState, acti
 
 
 // actions
-export const setIsLoggedInAC = (value: boolean) =>
-    ({type: 'login/SET-IS-LOGGED-IN', value} as const)
+export const setIsisRegistrationInInAC = (value: boolean) =>
+    ({type: 'registration/SET-IS-REGISTRATION-IN', value} as const)
 
 
 // thunks
-export const loginTC = (data: any) => (dispatch: Dispatch) => {
+export const registrationTC = (data: any) => (dispatch: Dispatch) => {
     registrationAPI.login(data)
         .then((res) => {
-            dispatch(setIsLoggedInAC(true))
+            dispatch(setIsisRegistrationInInAC(true))
         })
 }
 
 
 //types
-export type SetIsLoggedInType = ReturnType<typeof setIsLoggedInAC>
-export type LoginActionsType = SetIsLoggedInType
+export type SetIsRegistrationInType = ReturnType<typeof setIsisRegistrationInInAC>
+export type RegistrationActionsType = SetIsRegistrationInType

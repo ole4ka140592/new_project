@@ -3,15 +3,14 @@ import {instance} from "../common/instance";
 
 //api
 export const registrationAPI = {
-    login(loginForm: LoginFormType) {
-        return instance.post<ResponseLoginType>("/auth/login", loginForm)
+    login(registrationForm: RegistrationFormType) {
+        return instance.post("/auth/register", registrationForm)
     },
 }
 
-export type LoginFormType = {
+export type RegistrationFormType = {
     email: string,
     password: string,
-    rememberMe: boolean,
 }
 
 type ResponseLoginType = {

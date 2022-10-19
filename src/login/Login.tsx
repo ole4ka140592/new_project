@@ -1,11 +1,16 @@
 import s from "./Login.module.css";
 import {ChangeEvent, useState} from "react";
-import {useAppDispatch} from "../hooks/hooks";
+import {useAppDispatch, useAppSelector} from "../hooks/hooks";
 import {loginTC} from "./loginReducer";
+import {Navigate} from "react-router-dom";
 
 
 export const Login = () => {
+
+
     const dispatch = useAppDispatch()
+
+    const isLoggedIn = useAppSelector(state=> state.login.isLoggedIn)
 
     const [inputEmail, setInputEmail] = useState("")
     const [inputPassword, setInputPassword] = useState("")
@@ -29,6 +34,10 @@ export const Login = () => {
     }
     const sendLoginForm =()=> {
         dispatch(loginTC(loginForm))
+    }
+
+    if (isLoggedIn) {
+        return <Navigate to='/profile'/>
     }
 
 

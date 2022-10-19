@@ -1,11 +1,18 @@
 import s from "../Login/Login.module.css";
 import {ChangeEvent, useState} from "react";
-import {useAppDispatch} from "../hooks/hooks";
+import {useAppDispatch, useAppSelector} from "../hooks/hooks";
 import {loginTC} from "../Login/loginReducer";
+import {registrationTC} from "./registrationReducer";
+import {useSelector} from "react-redux";
+import {Navigate} from "react-router-dom";
 
 
 export const Registration = () => {
     const dispatch = useAppDispatch()
+
+    const isRegistrationIn = useAppSelector(state=> state.registration.isRegistrationIn)
+
+
 
     const [inputEmail, setInputEmail] = useState("")
     const [inputPassword, setInputPassword] = useState("")
@@ -31,7 +38,11 @@ export const Registration = () => {
 
     const sendRegistrationForm =()=> {
         console.log(registrationForm)
-        // dispatch(registrationTC(registrationForm))
+        dispatch(registrationTC(registrationForm))
+    }
+
+    if (isRegistrationIn) {
+        return <Navigate to='/login'/>
     }
 
 
