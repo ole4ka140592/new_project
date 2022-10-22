@@ -1,6 +1,6 @@
 import {AnyAction, applyMiddleware, combineReducers, createStore} from "redux";
 import thunk, {ThunkDispatch} from "redux-thunk";
-import {loginReducer} from "../Login/loginReducer";
+import {loginReducer} from "../components/Login/loginReducer";
 import {registrationReducer} from "../Registration/registrationReducer";
 import {appReducer} from "../app/authReducer";
 

@@ -1,7 +1,7 @@
-import s from "../Login/Login.module.css";
+import s from "../components/Login/Login.module.css";
 import {ChangeEvent, useState} from "react";
 import {useAppDispatch, useAppSelector} from "../hooks/hooks";
-import {loginTC} from "../Login/loginReducer";
+import {loginTC} from "../components/Login/loginReducer";
 import {registrationTC} from "./registrationReducer";
 import {useSelector} from "react-redux";
 import {Navigate} from "react-router-dom";

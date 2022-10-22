@@ -1,10 +1,13 @@
-import {instance} from "../common/instance";
+import {instance} from "../../common/instance";
 
 
 //api
 export const loginAPI = {
     login(loginForm: LoginFormType) {
         return instance.post<ResponseLoginType>("/auth/login", loginForm)
+    },
+    logout() {
+        return instance.delete("/auth/me")
     },
 }
 

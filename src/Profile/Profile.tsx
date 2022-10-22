@@ -2,7 +2,7 @@ import {useAppDispatch, useAppSelector} from "../hooks/hooks";
 import {Navigate} from "react-router-dom";
 
 export const Profile = () => {
-
+    debugger
 
     const dispatch = useAppDispatch()
 

@@ -1,5 +1,6 @@
 import {Dispatch} from "redux";
 import {loginAPI} from "./loginAPI";
+import {setAppStatusAC} from "../../app/authReducer";
 
 const initialState = {
     isLoggedIn: false
@@ -23,9 +24,19 @@ export const setIsLoggedInAC = (value: boolean) =>
 
 // thunks
 export const loginTC = (data: any) => (dispatch: Dispatch) => {
+    dispatch(setAppStatusAC("loading"))
     loginAPI.login(data)
         .then((res) => {
+            dispatch(setAppStatusAC("succeeded"))
             dispatch(setIsLoggedInAC(true))
+        })
+}
+
+export const loginOut = () => (dispatch: Dispatch) => {
+    // dispatch(setAppStatusAC("loading"))
+    loginAPI.logout()
+        .then((res) => {
+            dispatch(setIsLoggedInAC(false))
         })
 }
 

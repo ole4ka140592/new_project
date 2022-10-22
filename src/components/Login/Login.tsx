@@ -1,11 +1,13 @@
 import s from "./Login.module.css";
 import {ChangeEvent, useState} from "react";
-import {useAppDispatch, useAppSelector} from "../hooks/hooks";
+import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
 import {loginTC} from "./loginReducer";
 import {Navigate} from "react-router-dom";
 
 
 export const Login = () => {
+
+    debugger
 
 
     const dispatch = useAppDispatch()
@@ -36,8 +38,13 @@ export const Login = () => {
         dispatch(loginTC(loginForm))
     }
 
+
+    const onClickForgotPassword =()=> {
+        return <Navigate to='/forgotPassword'/>
+    }
+
     if (isLoggedIn) {
-        return <Navigate to='/profile'/>
+        return <Navigate to='/'/>
     }
 
 
@@ -49,6 +56,7 @@ export const Login = () => {
                        />
                 <p>password</p>
                 <input type='checkbox' onChange={onChangeCheckbox}/>
+                <button onClick={onClickForgotPassword}>Forgot Password</button>
                 <button onClick={sendLoginForm}>Sign IN</button>
             </div>
     )
