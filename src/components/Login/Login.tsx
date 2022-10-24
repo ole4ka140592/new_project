@@ -7,7 +7,7 @@ import {Navigate} from "react-router-dom";
 
 export const Login = () => {
 
-    debugger
+
 
 
     const dispatch = useAppDispatch()

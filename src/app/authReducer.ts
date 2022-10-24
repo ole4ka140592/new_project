@@ -42,8 +42,6 @@ export const authTC = () => (dispatch: Dispatch) => {
             // dispatch(setAppStatusAC("succeeded"))
             dispatch(setIsLoggedInAC(true))
             dispatch(setIsInitializedInAC(true))
-
-
         })
 }
 
