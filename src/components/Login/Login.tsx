@@ -6,9 +6,7 @@ import {Navigate} from "react-router-dom";
 
 
 export const Login = () => {
-
-
-
+debugger
 
     const dispatch = useAppDispatch()
 
@@ -44,7 +42,7 @@ export const Login = () => {
     }
 
     if (isLoggedIn) {
-        return <Navigate to='/'/>
+        return <Navigate to='/profile'/>
     }
 
 

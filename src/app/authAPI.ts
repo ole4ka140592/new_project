@@ -4,7 +4,7 @@ import {instance} from "../common/instance";
 //api
 export const authAPI = {
     me() {
-        return instance.post("/auth/me", )
+        return instance.post("/auth/me", {})
     },
 }
 

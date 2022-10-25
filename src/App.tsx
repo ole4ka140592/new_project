@@ -7,16 +7,16 @@ import {NavigateList} from "./common/NavigateList";
 
 
 function App() {
-    debugger
-
     const isLoading = useAppSelector(state=> state.login.isLoggedIn)
     const status = useAppSelector(state=> state.app.status)
     const dispatch = useAppDispatch()
 
     const isInitializedIn = useAppSelector(state=> state.app.isInitializedIn)
+
     useEffect(()=>{
         dispatch(authTC())
     }, [])
+
 
     if (!isInitializedIn) {
         debugger

@@ -1,7 +1,11 @@
+import {Box, LinearProgress} from "@mui/material";
+
 export const Preloader = ()=> {
     return (
         <div>
-            <img src='https://flevix.com/wp-content/uploads/2019/07/Bar-Preloader-3.gif'/>
+            <Box sx={{ width: '100%' }}>
+                <LinearProgress />
+            </Box>
         </div>
     )
 }

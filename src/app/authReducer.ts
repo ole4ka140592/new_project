@@ -43,9 +43,12 @@ export const authTC = () => (dispatch: Dispatch) => {
             dispatch(setIsLoggedInAC(true))
             dispatch(setIsInitializedInAC(true))
         })
+        .catch()
+        .finally(() => {
+                dispatch(setIsInitializedInAC(true))
+            }
+        )
 }
-
-
 
 
 //types
