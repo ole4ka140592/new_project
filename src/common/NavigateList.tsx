@@ -19,6 +19,7 @@ export const NavigateList = () => {
             }
 
             <NavLink to='/'>Profile</NavLink>
+            <NavLink to='/forgotPassword'>Forgot Password</NavLink>
         </div>
     )
 

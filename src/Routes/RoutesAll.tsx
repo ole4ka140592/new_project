@@ -4,6 +4,7 @@ import {Registration} from "../Registration/Registration";
 import React from "react";
 import {Routes} from "react-router-dom";
 import {Profile} from "../Profile/Profile";
+import {ForgotPassword} from "../ForgotPassword/ForgotPassword";
 
 
 export const RoutesAll = () => {
@@ -12,6 +13,7 @@ export const RoutesAll = () => {
             <Routes>
                 <Route path="/" element={<Navigate to="/profile"/>}/>
                 <Route path="/profile" element={<Profile/>}/>
+                <Route path="/forgotPassword" element={<ForgotPassword/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/registration" element={<Registration/>}/>
                 <Route path="/404" element={<h1>404: PAGE NOT FOUND</h1>}/>

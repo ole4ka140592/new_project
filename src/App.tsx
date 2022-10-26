@@ -19,7 +19,6 @@ function App() {
 
 
     if (!isInitializedIn) {
-        debugger
         return (<div>
             <Preloader/>
         </div>

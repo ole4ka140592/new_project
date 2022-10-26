@@ -7,7 +7,6 @@ export const Profile = () => {
 debugger
     const isLoggedIn = useAppSelector(state=> state.login.isLoggedIn)
     useEffect(()=>{
-     debugger
          if (!isLoggedIn) {
            return
         }
