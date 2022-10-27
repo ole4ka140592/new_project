@@ -1,4 +1,4 @@
-import {instance} from "../common/instance";
+import {instance} from "../../common/instance";
 
 
 //api

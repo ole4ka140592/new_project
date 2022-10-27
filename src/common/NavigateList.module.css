@@ -1,0 +1,21 @@
+.navLinks {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
+    padding: 0 30px 0 0;
+}
+
+.navLink:hover{
+    color: red;
+}
+
+.navLink:active{
+    font-weight: bold;
+    color: red;
+}
+
+

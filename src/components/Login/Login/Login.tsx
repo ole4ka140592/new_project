@@ -1,7 +1,8 @@
-import s from "./Login.module.css";
+import s from "../../../common/style/Form.module.css";
+import k from "./Login.module.css";
 import {ChangeEvent, useState} from "react";
-import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
-import {loginTC} from "./loginReducer";
+import {useAppDispatch, useAppSelector} from "../../../hooks/hooks";
+import {loginTC} from "../loginReducer";
 import {Navigate} from "react-router-dom";
 
 
@@ -45,15 +46,28 @@ export const Login = () => {
 
 
     return (
-            <div className={s.loginForm}>
+            <div className={s.form}>
+                <div className={s.p3}>Sign In</div>
+
                 <input className={s.input} onChange={onChangeInputEmail} value={inputEmail}/>
-                <p>email</p>
+                <div className={s.textUnderInput}>email</div>
+
                 <input className={s.input} type='password' value={inputPassword} onChange={onChangePassword}
                        />
-                <p>password</p>
-                <input type='checkbox' onChange={onChangeCheckbox}/>
-                <button onClick={onClickForgotPassword}>Forgot Password</button>
-                <button onClick={sendLoginForm}>Sign IN</button>
+                <div className={s.textUnderInput}>password</div>
+
+                <div className={k.rememberMe}>
+                    <input type='checkbox' onChange={onChangeCheckbox}/>
+                    <span>Remember me</span>
+                </div>
+
+                <div onClick={onClickForgotPassword} className={k.forgotPassword}>Forgot Password</div>
+
+                <button onClick={sendLoginForm} className={s.button}>Sign IN</button>
+
+                <div className={s.beforeBottomAttribute}>Already have an account?</div>
+
+                <div className={s.bottomAttribute}>Sign Up</div>
             </div>
     )
 }

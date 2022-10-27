@@ -1,7 +1,7 @@
-import s from "../components/Login/Login.module.css";
+import s from "../../common/style/Form.module.css";
 import {ChangeEvent, useState} from "react";
-import {useAppDispatch, useAppSelector} from "../hooks/hooks";
-import {loginTC} from "../components/Login/loginReducer";
+import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
+import {loginTC} from "../Login/loginReducer";
 import {registrationTC} from "./registrationReducer";
 import {useSelector} from "react-redux";
 import {Navigate} from "react-router-dom";
@@ -47,18 +47,23 @@ export const Registration = () => {
 
 
     return (
-            <div className={s.loginForm}>
+            <div className={s.form}>
+                <div className={s.p3}>Sign Up</div>
+
                 <input className={s.input} onChange={onChangeInputEmail} value={inputEmail}/>
-                <p>email</p>
+                <div className={s.textUnderInput}>Email</div>
 
                 <input className={s.input} type='password' value={inputPassword} onChange={onChangePassword}
                        />
-                <p>password</p>
+                <div className={s.textUnderInput}>Password</div>
 
                 <input className={s.input} type='password' value={inputConfirmPassword} onChange={onChangeConfirmPassword}/>
-                <p>confirm password</p>
+                <div className={s.textUnderInput}>Confirm password</div>
 
-                <button onClick={sendRegistrationForm}>Sign UP</button>
+                <button onClick={sendRegistrationForm} className={s.button}>Sign UP</button>
+                <div className={s.beforeBottomAttribute}>Already have an account?</div>
+
+                <div className={s.bottomAttribute}>Sign Up</div>
             </div>
     )
 }

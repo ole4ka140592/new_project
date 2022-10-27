@@ -1,0 +1,11 @@
+.rememberMe {
+    width: 360px;
+}
+
+.forgotPassword {
+    position: fixed;
+    margin-left: 250px;
+    margin-top: 300px;
+}
+
+
