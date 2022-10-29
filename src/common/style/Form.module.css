@@ -46,12 +46,16 @@
 .beforeBottomAttribute {
     position: fixed;
     margin-top: 480px;
+    text-decoration: none;
+    color: black;
 }
 
 .bottomAttribute {
     position: fixed;
     margin-top: 520px;
     font-size: 22px;
+    text-decoration: none;
+    color: black;
 }
 
 

@@ -4,7 +4,7 @@ import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
 import {loginTC} from "../Login/loginReducer";
 import {registrationTC} from "./registrationReducer";
 import {useSelector} from "react-redux";
-import {Navigate} from "react-router-dom";
+import {Navigate, NavLink} from "react-router-dom";
 
 
 export const Registration = () => {
@@ -61,9 +61,9 @@ export const Registration = () => {
                 <div className={s.textUnderInput}>Confirm password</div>
 
                 <button onClick={sendRegistrationForm} className={s.button}>Sign UP</button>
-                <div className={s.beforeBottomAttribute}>Already have an account?</div>
+                <NavLink to='/login' className={s.beforeBottomAttribute}>Already have an account?</NavLink>
 
-                <div className={s.bottomAttribute}>Sign Up</div>
+                <NavLink to='/login' className={s.bottomAttribute}>Sign In</NavLink>
             </div>
     )
 }

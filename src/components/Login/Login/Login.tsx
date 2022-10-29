@@ -3,8 +3,7 @@ import k from "./Login.module.css";
 import {ChangeEvent, useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../../hooks/hooks";
 import {loginTC} from "../loginReducer";
-import {Navigate} from "react-router-dom";
-
+import {Navigate, NavLink} from "react-router-dom";
 
 export const Login = () => {
     const dispatch = useAppDispatch()
@@ -35,11 +34,6 @@ export const Login = () => {
         dispatch(loginTC(loginForm))
     }
 
-
-    const onClickForgotPassword =()=> {
-        return <Navigate to='/forgotPassword'/>
-    }
-
     if (isLoggedIn) {
         return <Navigate to='/profile'/>
     }
@@ -61,13 +55,13 @@ export const Login = () => {
                     <span>Remember me</span>
                 </div>
 
-                <div onClick={onClickForgotPassword} className={k.forgotPassword}>Forgot Password</div>
+                <NavLink to='/forgotPassword' className={k.forgotPassword}>Forgot Password</NavLink>
 
                 <button onClick={sendLoginForm} className={s.button}>Sign IN</button>
 
-                <div className={s.beforeBottomAttribute}>Already have an account?</div>
+                <NavLink to='/login' className={s.beforeBottomAttribute}>Already have an account?</NavLink>
 
-                <div className={s.bottomAttribute}>Sign Up</div>
+                <NavLink to='/registration' className={s.bottomAttribute}>Sign Up</NavLink>
             </div>
     )
 }

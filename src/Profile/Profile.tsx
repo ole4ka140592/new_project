@@ -4,7 +4,6 @@ import {useEffect} from "react";
 import {authTC} from "../app/authReducer";
 
 export const Profile = () => {
-debugger
     const isLoggedIn = useAppSelector(state=> state.login.isLoggedIn)
     useEffect(()=>{
          if (!isLoggedIn) {

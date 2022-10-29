@@ -3,6 +3,7 @@ import k from "./ForgotPassword.module.css";
 import {ChangeEvent, useState} from "react";
 import {useAppDispatch} from "../../../hooks/hooks";
 import {forgotPasswordTC} from "../forgotPasswordReducer";
+import {NavLink} from "react-router-dom";
 
 
 export const ForgotPassword = () => {
@@ -19,9 +20,11 @@ export const ForgotPassword = () => {
 
     const ForgotPasswordForm = {
         email: input,
-        from: "test-front-admin <ai73a@yandex.by>",
-        // message: ""
+        from: '<ole4ka140592@gmail.com>',
+        message: `<div style="background-color: lime; padding: 15px">
+password recovery link: <a href=https://github.com/ole4ka140592/new_project#/set-new-password/$token$'>link</a></div>`
     }
+
     return (
         <div className={s.form}>
             <div className={s.p3}>Forgot your Password?</div>
@@ -30,8 +33,8 @@ export const ForgotPassword = () => {
             <div className={k.text}>Enter your email address and we will send you further instructions</div>
 
             <button onClick={sendYourPassword} className={s.button}>Send instructions</button>
-            <div className={s.beforeBottomAttribute}>Did you remember your password?</div>
-            <div className={s.bottomAttribute}>Try logging in</div>
+            <NavLink to='/login' className={s.beforeBottomAttribute}>Did you remember your password?</NavLink>
+            <NavLink to='/login' className={s.bottomAttribute}>Try logging in</NavLink>
 
 
         </div>
