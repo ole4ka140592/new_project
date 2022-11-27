@@ -3,7 +3,36 @@ import {Dispatch} from "redux";
 
 
 const initialState = {
-    value: false
+
+        cardsCount:number,
+        created:string,
+
+grade: number,
+
+more_id    :string,
+name:string,
+path:string,
+
+private: boolean,
+
+rating: number,
+
+shots:number,
+type: string,
+    "pack"
+updated
+    :
+    "2022-11-27T20:29:39.406Z"
+user_id
+    :
+    "636fed241709c207a4b7d6dc"
+user_name
+    :
+    "kirill"
+__v
+    :
+    0
+
 }
 type InitialStateType = typeof initialState
 
@@ -25,8 +54,10 @@ export const setCardsAC = (value: any) =>
 // thunks
 export const setCardsTC = () => (dispatch: Dispatch) => {
     // dispatch(setAppStatusAC("loading"))
-    profileAPI.login()
+    profileAPI.setPack()
         .then((res) => {
+            console.log("good")
+            dispatch(setCardsAC(res.data))
             // dispatch(setCardsAC())
         })
 }

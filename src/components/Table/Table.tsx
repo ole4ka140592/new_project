@@ -5,6 +5,7 @@ export const Table = () => {
                 <tr>
                     <th>Name</th>
                     <th>Cards</th>
+                    <th>Last Updated</th>
                     <th>Created By</th>
                     <th>Actions</th>
                 </tr>

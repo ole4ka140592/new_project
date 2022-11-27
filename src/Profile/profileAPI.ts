@@ -2,7 +2,7 @@
 import {instance} from "../common/instance";
 
 export const profileAPI = {
-    login() {
+    setPack() {
         return instance.get("/cards/pack")
     },
 }
