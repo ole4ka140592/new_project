@@ -2,38 +2,7 @@ import {profileAPI} from "./profileAPI";
 import {Dispatch} from "redux";
 
 
-const initialState = {
-
-        cardsCount:number,
-        created:string,
-
-grade: number,
-
-more_id    :string,
-name:string,
-path:string,
-
-private: boolean,
-
-rating: number,
-
-shots:number,
-type: string,
-    "pack"
-updated
-    :
-    "2022-11-27T20:29:39.406Z"
-user_id
-    :
-    "636fed241709c207a4b7d6dc"
-user_name
-    :
-    "kirill"
-__v
-    :
-    0
-
-}
+const initialState = {}
 type InitialStateType = typeof initialState
 
 export const profileReducer = (state: InitialStateType = initialState, action: ProfileActionsType): InitialStateType => {
