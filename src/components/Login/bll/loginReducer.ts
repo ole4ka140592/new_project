@@ -1,6 +1,6 @@
 import {Dispatch} from "redux";
-import {loginAPI} from "./loginAPI";
-import {setAppStatusAC} from "../../app/authReducer";
+import {loginAPI} from "../api/loginAPI";
+import {setAppStatusAC} from "../../../app/bll/appReducer";
 
 const initialState = {
     isLoggedIn: false

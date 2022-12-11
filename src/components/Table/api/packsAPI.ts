@@ -1,7 +1,8 @@
 //api
-import {instance} from "../common/instance";
 
-export const profileAPI = {
+import {instance} from "../../../common/instance";
+
+export const packsAPI = {
     setPack() {
         return instance.get<CardsPacksType>("/cards/pack")
     },

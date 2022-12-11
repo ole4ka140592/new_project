@@ -1,10 +1,10 @@
 import {Navigate, Route} from "react-router-dom";
-import {Login} from "../components/Login/Login/Login";
-import {Registration} from "../components/Registration/Registration";
+import {Login} from "../components/Login/ui/Login";
+import {Registration} from "../components/Registration/ui/Registration";
 import React from "react";
 import {Routes} from "react-router-dom";
-import {Profile} from "../Profile/Profile";
-import {ForgotPassword} from "../components/ForgotPassword/UI/ForgotPassword";
+import {Profile} from "../Profile/ui/Profile";
+import {ForgotPassword} from "../components/ForgotPassword/ui/ForgotPassword";
 
 
 export const RoutesAll = () => {

@@ -2,7 +2,7 @@ import s from "../../../common/style/Form.module.css";
 import k from "./ForgotPassword.module.css";
 import {ChangeEvent, useState} from "react";
 import {useAppDispatch} from "../../../hooks/hooks";
-import {forgotPasswordTC} from "../forgotPasswordReducer";
+import {forgotPasswordTC} from "../bll/forgotPasswordReducer";
 import {NavLink} from "react-router-dom";
 
 

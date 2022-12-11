@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../hooks/hooks";
-import {loginOut} from "../components/Login/loginReducer";
+import {loginOut} from "../components/Login/bll/loginReducer";
 import s from "./NavigateList.module.css";
 
 export const NavigateList = () => {

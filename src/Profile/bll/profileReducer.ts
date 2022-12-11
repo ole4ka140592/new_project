@@ -1,4 +1,4 @@
-import {profileAPI} from "./profileAPI";
+import {profileAPI} from "../api/profileAPI";
 import {Dispatch} from "redux";
 
 

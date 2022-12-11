@@ -1,7 +1,6 @@
 import {Dispatch} from "redux";
-import {authAPI} from "./authAPI";
-import {setIsLoggedInAC} from "../components/Login/loginReducer";
-import {loginAPI} from "../components/Login/loginAPI";
+import {appAPI} from "../api/appAPI";
+import {setIsLoggedInAC} from "../../components/Login/bll/loginReducer";
 
 const initialState = {
     isInitializedIn: false,
@@ -37,7 +36,7 @@ export const setAppStatusAC = (status: RequestStatusType) => {
 // thunks
 export const authTC = () => (dispatch: Dispatch) => {
     // dispatch(setAppStatusAC("loading"))
-    authAPI.me()
+    appAPI.me()
         .then((res) => {
             // dispatch(setAppStatusAC("succeeded"))
             dispatch(setIsLoggedInAC(true))

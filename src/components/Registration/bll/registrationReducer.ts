@@ -1,5 +1,5 @@
 import {Dispatch} from "redux";
-import {registrationAPI} from "./registrationAPI";
+import {registrationAPI} from "../api/registrationAPI";
 
 const initialState = {
     isRegistrationIn: false

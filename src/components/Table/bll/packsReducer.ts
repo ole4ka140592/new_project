@@ -1,6 +1,6 @@
 
 import {Dispatch} from "redux";
-import {packsAPI} from "./packsAPI";
+import {packsAPI} from "../api/packsAPI";
 
 
 const initialState = {}

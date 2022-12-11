@@ -1,8 +1,8 @@
-import s from "../../common/style/Form.module.css";
+import s from "../../../common/style/Form.module.css";
 import {ChangeEvent, useState} from "react";
-import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
-import {loginTC} from "../Login/loginReducer";
-import {registrationTC} from "./registrationReducer";
+import {useAppDispatch, useAppSelector} from "../../../hooks/hooks";
+import {loginTC} from "../../Login/bll/loginReducer";
+import {registrationTC} from "../bll/registrationReducer";
 import {useSelector} from "react-redux";
 import {Navigate, NavLink} from "react-router-dom";
 

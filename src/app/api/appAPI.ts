@@ -1,8 +1,8 @@
-import {instance} from "../common/instance";
+import {instance} from "../../common/instance";
 
 
 //api
-export const authAPI = {
+export const appAPI = {
     me() {
         return instance.post("/auth/me", {})
     },

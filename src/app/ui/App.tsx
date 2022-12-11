@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
-import {RoutesAll} from "./Routes/RoutesAll";
-import {useAppDispatch, useAppSelector} from "./hooks/hooks";
-import {authTC} from "./app/authReducer";
-import {Preloader} from "./preloader/Preloader";
-import {NavigateList} from "./common/NavigateList";
+import {RoutesAll} from "../../Routes/RoutesAll";
+import {useAppDispatch, useAppSelector} from "../../hooks/hooks";
+import {authTC} from "../bll/appReducer";
+import {Preloader} from "../../preloader/Preloader";
+import {NavigateList} from "../../common/NavigateList";
 
 
 function App() {

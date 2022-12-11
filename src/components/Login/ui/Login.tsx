@@ -2,7 +2,7 @@ import s from "../../../common/style/Form.module.css";
 import k from "./Login.module.css";
 import {ChangeEvent, useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../../hooks/hooks";
-import {loginTC} from "../loginReducer";
+import {loginTC} from "../bll/loginReducer";
 import {Navigate, NavLink} from "react-router-dom";
 
 export const Login = () => {

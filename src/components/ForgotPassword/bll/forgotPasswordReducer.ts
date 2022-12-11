@@ -1,5 +1,5 @@
 import {Dispatch} from "redux";
-import {forgotPasswordAPI} from "./forgotPasswordAPI";
+import {forgotPasswordAPI} from "../api/forgotPasswordAPI";
 
 const initialState = {
     isForgotPassword: false
